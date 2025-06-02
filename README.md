@@ -8,7 +8,7 @@ this small scripts will help u if u wanna create smart home system using ZONT an
 - clone this repo
 - run setup.sh with bash
 - connect to local wifi
-- write your API and whitelist (usernames) to json
+- write your API and whitelist (tg usernames) to data.json
 - run bot.js (```node bot.js```)
 
 ---

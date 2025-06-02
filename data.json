@@ -1,0 +1,10 @@
+{
+  "whiteList": [
+        "example1",
+        "example2",
+        "example3"],
+    "apiKey": "paste ur bot api key here",
+    "login": "paste ur ZONT login here",
+    "password": "paste ur ZONT password here",
+    "clientEmail": "paste ur ZONT email here"
+}

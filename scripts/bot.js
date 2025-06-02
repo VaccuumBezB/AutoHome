@@ -5,18 +5,29 @@
 
 const GPIO = require('orange-pi-gpio');
 const TGBOT = require('node-telegram-bot-api');
+const fs = require('fs');
 
 ////////////////////////////// ИНИЦИАЛИЗАЦИЯ / INIT ///////////////////////////////
 
-let ZONT_TOKEN; // this one will be generated
-const ZONT_THINGS = { // paste here your ZONT account details
-    login: '',
-    password: '',
-    clientEmail: ''
+try 
+{
+    const data = fs.readFileSync('../data.json', 'utf8');
+    const jsonData = JSON.parse(data);
+}
+catch (err) 
+{
+    console.error('Error reading or parsing file:', err);
 }
 
-const API_KEY = 'your bot api key'; // tg bot api key (get on BotFather)
-let whiteList = ['exampleusername', 'otherexampleusername']; // bot users whitelist (telegram username)
+let ZONT_TOKEN; // this one will be generated
+const ZONT_THINGS = { // paste here your ZONT account details
+    login: jsonData.login,
+    password: jsonData.password,
+    clientEmail: jsonData.clientEmail
+}
+
+const API_KEY = jsonData.apiKey; // tg bot api key (get on BotFather)
+let whiteList = jsonData.whiteList; // bot users whitelist (telegram username)
 
 let gpio5 = new GPIO({
     pin: 5,

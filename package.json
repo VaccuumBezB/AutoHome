@@ -1,0 +1,18 @@
+{
+  "name": "autohome-server",
+  "version": "7.7.7",
+  "description": "AVAVA",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo AVAVAVAVAVAAVVAVA"
+  },
+  "repository": {
+    "type": "git",
+    "url": "da hell i need it"
+  },
+  "keywords": [
+    "autohome"
+  ],
+  "author": "Vac'cuum",
+  "license": "ISC"
+}
